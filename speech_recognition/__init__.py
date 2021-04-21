@@ -1127,8 +1127,6 @@ class Recognizer(AudioSource):
         result = json.loads(response_text)
 
         # return results
-        print('result:')
-        pprint(result, indent=4)
         if show_all:
             return result
         if "RecognitionStatus" not in result or result["RecognitionStatus"] != "Success" or "NBest" not in result:
